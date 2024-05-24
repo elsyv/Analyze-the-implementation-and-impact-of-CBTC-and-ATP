@@ -8,9 +8,9 @@ The document is structured as follows:
 - **Relationship between ATP and CBTC**: Exploration of the interdependence between ATP and CBTC technologies.
 - **Railway Projects in Ecuador**: Context and examples of relevant railway projects within Ecuador.
 - **Objectives**: Definition of the main goals of the study.
+- **Project Selection**: Criteria and process for selecting the railway project for analysis.
 
 ## Methodology
-- **Project Selection**: Criteria and process for selecting the railway project for analysis.
 - **ATP and CBTC Analysis**: Detailed examination of ATP and CBTC systems.
 - **Automation Level Specification**: Determination of the degree of automation for the project.
 - **Railway Line Characterization**: Description of the specific railway line under study.
