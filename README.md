@@ -1,7 +1,7 @@
 # Analyze CBTC and ATP
 The document is structured as follows:
 ## Diagram
-<img src="Methodoly.jpg" alt="Methodology Diagram" width="500"/>
+<img src="Methodoly.jpg" alt="Methodology Diagram" width="700"/>
 
 ## Introduction
 - **Concepts of ATP and CBTC**: Overview of Automatic Train Protection (ATP) and Communication-Based Train Control (CBTC) systems.
