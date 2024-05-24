@@ -20,9 +20,6 @@ The document is structured as follows:
 ## Results
 - Presentation of findings from the ATP and CBTC analysis.
 
-## Recommendations
-- Suggestions based on the results to improve or optimize the railway systems.
-
 ## Conclusions
 - Summary of the study’s key points and final conclusions.
 
