@@ -11,11 +11,11 @@ The document is structured as follows:
 - **Project Selection**: Criteria and process for selecting the railway project for analysis.
 
 ## Methodology
-###Analysis:
+### Analysis:
 - **ATP and CBTC Analysis**: Detailed examination of ATP and CBTC systems.
 - **Automation Level Specification**: Determination of the degree of automation for the project.
 - **Railway Line Characterization**: Description of the specific railway line under study.
-###Evaluation:
+### Evaluation:
 - **Headway Analysis**: Evaluation of train intervals (headways) for the selected project.
 - **ATP and CBTC Transition**: Analysis of the transition process from ATP to CBTC.
 
