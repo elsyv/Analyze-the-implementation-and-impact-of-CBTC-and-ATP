@@ -1,10 +1,7 @@
 # Analyze CBTC and ATP
-The document is structured as follows.
+The document is structured as follows:
 ## Diagram
 ![Methodoly](https://github.com/elsyv/Analyze-the-implementation-and-impact-of-CBTC-and-ATP/assets/160219319/a3f8996d-0efd-40d1-8a6f-f569b493b965)
-# Document Structure
-
-The document is structured as follows:
 
 ## Introduction
 - **Concepts of ATP and CBTC**: Overview of Automatic Train Protection (ATP) and Communication-Based Train Control (CBTC) systems.
