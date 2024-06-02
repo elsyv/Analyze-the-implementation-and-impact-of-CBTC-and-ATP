@@ -23,7 +23,6 @@
 \usepackage{colortbl}
 \usepackage{tablefootnote}
 \usepackage{booktabs}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                    INICIO DEL DOCUMENTO                                                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,37 +37,46 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%% PRIMER AUTOR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \author{\IEEEauthorblockN{1\textsuperscript{st} Elsy del Rocío Villamar Garcés}
-\IEEEauthorblockA{\textit{Escuela Técnica Superior de Ingenieros Industriales} \\
+\IEEEauthorblockA{\textit{Escuela Técnica Superior de Ingenieros Industriales}\\
 \textit{Universidad Politecnica de Madrid}\\
 Madrid, Spain \\
+evillamar@alumnos.upm.es\\
 \includegraphics[keepaspectratio,width=0.9em]{Imagenes_general/ORCIDiD_icon128x128.png}
 \href{https://orcid.org/0000-0001-7041-8611}{{orcid.org/0000-0001-7041-8611}}
-}
-~\\
+}\\
 \and
 %%%%%%%%%%%%%%%%%%%%%%%% SEGUNDO AUTOR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \IEEEauthorblockN{2\textsuperscript{nd} Rommel Andrés Rivera Buenaño}
-\IEEEauthorblockA{\textit{} \\
+\IEEEauthorblockA{\textit{ Mechanical Engineering Department} \\
 \textit{}\\
 Madrid, Spain \\
 \includegraphics[keepaspectratio,width=0.9em]{Imagenes_general/ORCIDiD_icon128x128.png}
 \href{https://orcid.org/0009-0002-2130-5922}{{orcid.org/0009-0002-2130-5922}}
-}
+}\\
+\and
 %%%%%%%%%%%%%%%%%%%%%%%% TERCER AUTOR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%~\\
-%\and
-%\IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
-%\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-%\textit{name of organization (of Aff.)}\\
-%City, Country \\
-%email address or ORCID}
-}
+\IEEEauthorblockN{3\textsuperscript{rd}  Javier Gómez Fernández}
+\IEEEauthorblockA{\textit{Mechanical Engineering Department} \\
+\textit{Universidad Politecnica de Madrid}\\
+Madrid, Spain \\
+\includegraphics[keepaspectratio,width=0.9em]{Imagenes_general/ORCIDiD_icon128x128.png}
+\href{https://orcid.org/0000-0002-3382-5776}{{orcid.org/0000-0002-3382-5776}}
+}\\
+\and
+%%%%%%%%%%%%%%%%%%%%%%%% CUARTO AUTOR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IEEEauthorblockN{4\textsuperscript{to} Juan de Dios Sanz Bobi}
+\IEEEauthorblockA{\textit{Mechanical Engineering Department} \\
+\textit{Universidad Politecnica de Madrid}\\
+Madrid, Spain \\
+\includegraphics[keepaspectratio,width=0.9em]{Imagenes_general/ORCIDiD_icon128x128.png}
+\href{https://orcid.org/0000-0002-8039-8527}{{orcid.org/0000-0002-8039-8527}}
+}}
 \maketitle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                    RESUMEN                                                                    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-This study analyzes the implementation and impact of CBTC and ATP signaling systems in railway projects in Ecuador. ATP ensures safety through train detection, separation, and interlocking control. CBTC systems, which support several grades of automation, offer advantages in reliability, capacity, energy efficiency, and scalability compared to ATP. Using the Binary Decision Diagrams (BDD) method, the study demonstrates that CBTC outperforms ATP in terms of reliability (12.85\%), safety (10.5\%), capacity (2.8\%), maintenance (1.66\%), and costs (4.5\%). Simulations indicate that transitioning from ATP to CBTC improves capacity by optimizing headway to 30 seconds less than the theoretical value in the studied case, and enhances traffic management by adding 6 more trains to the line. The study concludes that adopting CBTC technology in Ecuador is a strategic investment with substantial long-term benefits in operational efficiency, safety, and reliability.
+¿Did you know that the CBTC and ATP railway signaling systems could transform the management capacity of the railway superstructure in Ecuador? ATP ensures safety through train detection, separation, and interlocking control. CBTC systems, which support several grades of automation, offer advantages in reliability, capacity, energy efficiency, and scalability compared to ATP. Using the Binary Decision Diagrams (BDD) method, this research demonstrates that CBTC outperforms ATP in terms of reliability (12.85\%), safety (10.5\%), capacity (2.8\%), maintenance (1.66\%), and costs (4.5\%). Simulations indicate that transitioning from ATP to CBTC improves capacity by optimizing headway to 30 seconds less than the theoretical value in the studied case, and enhances traffic management by adding 6 more trains to the line. This analysis concludes that adopting CBTC technology in Ecuador is a strategic investment with substantial long-term benefits in operational efficiency, safety, and reliability.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -82,7 +90,7 @@ CBTC, ATP, ATO, ATS, Headway, Railway Signaling, UGT
 \section{Introduction}
 In the initial stages, railway signaling depended on human operators and telephonic communications to coordinate between stations, crucial for ensuring safety; however, with technological advancements, ATP systems have significantly enhanced protection, safety, and efficiency in railway operations.
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
     \centering
     \centerline{\includegraphics[scale=0.20, angle=0]{Imagenes_general/ATP_Architecture_Metro_Quito_1.pdf}}
     \caption{ATP Architecture diagram}
@@ -118,23 +126,22 @@ The objectives of this article:
 \section{Railway Projects in Ecuador}
 
 In Ecuador, railway projects are increasingly taking a central role in efforts to modernize transportation infrastructure and efficiently connect various regions and cities of the country, thereby revitalizing both the local economy and access to essential services \cite{b2}. 
-\begin{figure}[ht]
+
+\subsection{Regional train}
+
+Between 1872 and 1930, Ecuador significantly expanded its railway network, focusing on internal integration and the transport of agricultural products and passengers. However, growth ceased in 1930, leading to centralized administration and current use primarily for tourism, with notable routes including Alausí-Sibambe and Quito-El Boliche-Machachi. Figure[\ref{fig:timeline_train_reg}]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.4\textwidth]{Imagenes_general/Timeline railway Guayaquil - Quito_1.pdf}
     \caption{Timeline Ecuadorian Regional train}
     \label{fig:timeline_train_reg}
 \end{figure}
 
-\subsection{Regional train}
-
-Between 1872 and 1930, Ecuador significantly expanded its railway network, focusing on internal integration and the transport of agricultural products and passengers. However, growth ceased in 1930, leading to centralized administration and current use primarily for tourism, with notable routes including Alausí-Sibambe and Quito-El Boliche-Machachi. Figure[\ref{fig:timeline_train_reg}]
-
-
 \subsection{Tramway de los Cuatro Rios}
 
 Cuenca, renowned for its colonial architecture and vibrant urban life, initiated a tram project during the 2009-2014 period with a budget of 180 million dollars, aimed at revitalizing urban mobility and facing challenges such as delays and criticisms, yet emerging as a symbol of modernity and effective management \cite{b3}. Figure [\ref{fig:timeline_train_cu}]
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\textwidth, scale=0.50]{Imagenes_general/Tranvía de Cuenca_en.pdf}
     \caption{Timeline Tram Cuenca}
@@ -145,7 +152,7 @@ Cuenca, renowned for its colonial architecture and vibrant urban life, initiated
 
 Quito, the capital of Ecuador, is advancing sustainable urban development with its inaugural Metro project, aiming to alleviate congestion through efficient and eco-friendly transportation, facing technical and financial challenges, yet promising to transform mobility and urban life. Figure [\ref{Timeline Metro Quito}]
 
-\begin{figure}[ht]                                     
+\begin{figure}[htbp]                                     
     \centerline{\includegraphics[width=0.5\textwidth, scale=0.50]{Imagenes_general/Metro de Quito_en.pdf}}
     \caption{Timeline Metro Quito}                     
     \label{Timeline Metro Quito}                                                 
@@ -159,7 +166,7 @@ Finally, Ecuador's railway projects, such as the Regional Train, the Cuenca Tram
 
 \section{Methodology}
 The following analysis used the Binary Decision Diagram (BDD) \cite{b6} \cite{b5} method to characterize processes or components in specific variables, with the objective of evaluating ATP systems and CBTC systems in metropolitan urban transportation. This facilitates comparative assessments and observations of the following characteristics: reliability\cite{b7}, safety, capacity, maintenance and costs through graphical representation.
-\begin{figure}[h]
+\begin{figure}[htbp]
  \centering
         \includegraphics[width=0.25\textwidth,scale=1]{Imagenes_general/Gráfico_Reliability.jpg}
         \includegraphics[width=0.20\textwidth,scale=1]{Imagenes_general/Rliability_tabla.jpg}
@@ -169,7 +176,7 @@ The following analysis used the Binary Decision Diagram (BDD) \cite{b6} \cite{b5
 
 \subsection{Reliability}
 The reliability of ATP relies on components like balises and speed controllers for flexible operation, while CBTC requires flawless execution of sophisticated systems like positioning and wireless communication to ensure exceptional adaptability and reliability, with both systems emphasizing the critical role of effective communication in smooth railway operations. Figure [\ref{fig:Reliability Analysis}]\\
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.28\textwidth,scale=1]{Imagenes_general/Gráfico_Safety.jpg}
     \includegraphics[width=0.13\textwidth,scale=1]{Imagenes_general/Tabla_Safety.png}
@@ -178,7 +185,7 @@ The reliability of ATP relies on components like balises and speed controllers f
 \end{figure}
 \subsection{Safety}
 ATP systems rely on traditional components and driver responses for safety, whereas CBTC systems use advanced positioning and communication technologies for more autonomous operation, with CBTC also excelling in adaptability and scalability by integrating technological advancements to enhance safety and reliability. Figure [\ref{fig:Safety Analysis}]\\
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.25\textwidth,scale=1]{Imagenes_general/Gráfico_Capability.jpg}
     \includegraphics[width=0.20\textwidth,scale=1]{Imagenes_general/Tabla_Capability.png}
@@ -187,7 +194,7 @@ ATP systems rely on traditional components and driver responses for safety, wher
 \end{figure}
 \subsection{Capability}
 ATP systems are limited in modernization due to reliance on established signaling and manual processes, while CBTC systems, supported by real-time sensors within a robust communication framework, excel in automated capacity, adaptability, and scalability to meet advancing railway demands. Figure [\ref{fig:Capability Analysis}]\\
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
         \includegraphics[width=0.27\textwidth,scale=1]{Imagenes_general/Gráfico_Maintenece.png}
     \includegraphics[width=0.15\textwidth,scale=1]{Imagenes_general/Tabla_Maintenece.jpg}
@@ -196,8 +203,7 @@ ATP systems are limited in modernization due to reliance on established signalin
 \end{figure}
 \subsection{Maintenance}
 Maintenance of ATP systems is challenged by aging components and fixed signaling, complicating updates, whereas CBTC systems benefit from a modern, modular design and software reliance, easing upgrades and adapting to new technologies with an emphasis on real-time communication. Figure [\ref{fig:Maintenance Analysis}]\\
-
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
         \includegraphics[width=0.23\textwidth,scale=1]{Imagenes_general/Gráfico_costs.png}
     \includegraphics[width=0.22\textwidth,scale=1]{Imagenes_general/tablas_costs.jpg}
@@ -209,11 +215,11 @@ In railway systems cost analysis, ATP operates at lower costs due to simpler, ex
 
 The evaluation reveals that CBTC outperforms ATP across various critical parameters, notably demonstrating superior reliability, safety, and cost-effectiveness.[\ref{fig:Analysis}]
 
-An analysis was conducted on the grades of automation, taking into account the basic train operation functions in the Quito metro system with the current ATP, as well as the feasibility of conducting a study for the implementation of CBTC.
+An analysis of automation grades was performed, taking into account the basic train operation functions in the Quito metro system with the current ATP, as well as the feasibility of conducting a study for the implementation of CBTC.
 
-\subsection{UGT, Grade of  Automation\cite{b17}}
+\subsection{UGT, Grade of  Automation }
 
-In the table of the UNE$-$EN$-$62290$-$1 standard, which addresses the basic functions for determining the grades of automation, the following is analyzed: the gray columns are not in effect to the current mass transportation system in Quito, the yellow column represents the grade of automation implemented in Quito's Metro, and the green columns represent the potential CBTC system that could be implemented in metropolitan urban transport.
+In the table of the UNE$-$EN$-$62290$-$1 standard \cite{b17}, which addresses the basic functions for determining the grades of automation, the following is analyzed: the gray columns are not in effect to the current mass transportation system in Quito, the yellow column represents the grade of automation implemented in Quito's Metro, and the green columns represent the potential CBTC system that could be implemented in metropolitan urban transport.
 \begin{table}[htbp]
 \small
 \centering
@@ -289,7 +295,7 @@ F_{\text{max,c}} = \frac{P_{c} \cdot 100 \cdot 3.6}{V}
     \item $V$ is the speed of the train, 100 km/h.
 \end{itemize}
 Effective power, also represented in Equation \eqref{ec:FT}, denotes the engine's ability to maintain motion under varying load and resistance conditions. Maximum braking force indicates the train's capacity to decelerate safely and efficiently, while line operating speed defines the maximum speed at which trains can travel under normal service conditions.
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Simulation cases}
 \label{table:simulations}
 \centering
@@ -328,7 +334,7 @@ N° & \begin{tabular}[c]{@{}c@{}}Station \\ stopping \\ time [sec]\end{tabular} 
 \end{table}
 
 The initial simulation conditions used in the analyses are exhaustively described in Table [\ref{table:simulations}] and Table[\ref{table:train_data}]. These tables include critical variables such as station dwell time, headway, and the total number of trains in operation. These variables are essential for the detailed understanding and explanation of the current research. All other simulation cases will be published in a publicly accessible repository, allowing readers to compare and contrast additional cases not covered in this article.\cite{b12} 
-\begin{table}[h]
+\begin{table}[htbp]
 \caption{Train Data}
 \label{table:train_data}
 \centering
@@ -380,7 +386,7 @@ Hold time at stations & 25,00 [\scriptsize seconds] & \cite{b15} \\
 
 \subsubsection{SIM-4 TIME-25 HW-2 TRAINS-18}
 Simulation 4, presents a scenario with 18 trains\cite{b20}, a 2-minute interval between trains\cite{b20}, and a 25-second stop at each station\cite{b15}. This simulation is adjusted to the currently implemented ATP system design. The time interval between the departure of the last train and the arrival of the first train in the opposite direction has a sufficient margin to allow a normal operation.\\
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.35\textwidth,scale=1]{Imagenes_general/SIM-4_TIME-25_HW-2_TRAINS-18.jpg}
     \caption{Simulation with 18 trains and headway 2 mins}
@@ -389,7 +395,7 @@ Simulation 4, presents a scenario with 18 trains\cite{b20}, a 2-minute interval 
 
 \subsubsection{SIM-8 TIME-25 HW-1.5 TRAINS-24}
 Simulation 8, considers an operational scenario with 24 trains, a 1.5-minute interval between trains, and a 25-second stop at each station\cite{b15}. The time from the start of the route of the last train on the left-to-right direction presents a headway greater than the theoretical established value compared to the start time of the route of the first train in the opposite direction.
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.35\textwidth,scale=1]{Imagenes_general/SIM-8_TIME-25_HW-1_5_TRAINS-24.jpg}
     \caption{Simulation with 24 trains and headway 1.5 mins}
@@ -397,8 +403,8 @@ Simulation 8, considers an operational scenario with 24 trains, a 1.5-minute int
 \end{figure}
 
 \subsubsection{SIM-9 TIME-25 HW-2 TRAINS-16}
-Simulation 9, analyzes a scenario with 18 trains, of which 2 are under maintenance and 16 are in operation\cite{b22}. With a theoretical interval of 2 minutes between trains and a 25-second stop at each station, the simulation shows a lower train density. Under these conditions, the system can operate normally for a lower-than-expected passenger demand. This case reflects the current operational situation of the Quito Metro project\cite{b21}.
-\begin{figure}[h]
+Simulation 9, analyzes a scenario with 18 trains, of which 2 are under maintenance and 16 are in operation\cite{b20}. With a theoretical interval of 2 minutes between trains and a 25-second stop at each station, the simulation shows a lower train density. Under these conditions, the system can operate normally for a lower-than-expected passenger demand. This case reflects the current operational situation of the Quito Metro project\cite{b19}.
+\begin{figure}[htbp]
     \centering
 \includegraphics[width=0.35\textwidth,scale=1]{Imagenes_general/SIM-9_TIME-25_HW-2_TRAINS-16.jpg}
     \caption{Simulation with 16 trains and headway 2 mins}
@@ -407,7 +413,7 @@ Simulation 9, analyzes a scenario with 18 trains, of which 2 are under maintenan
 
 \subsection{Transition analysis of an ATP to a CBTC}
 The transition from an ATP system to a CBTC system requires several steps and considerations to ensure capacity and safety. The key aspects of this transition are detailed below: Figure \ref{fig:Transition ATP - CBTC}
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
 \includegraphics[width=0.45\textwidth,scale=1]{Imagenes_general/PROCESOS_TRANSITION.jpg}
     \caption{Transition ATP - CBTC}
@@ -418,7 +424,7 @@ The transition from an ATP system to a CBTC system requires several steps and co
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 The importance level determined for the system analysis is as follows: reliability 30\%, safety 35\%, capacity 7\%, maintenance 10\%, and costs 18\%. The sum of these importance levels is 100\%. Figure \ref{fig:Analysis}
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
 \includegraphics[width=0.4\textwidth, scale=1]{Imagenes_general/Grahp_general.png}
     \caption{ ATP and CBTC Analysis}
@@ -439,7 +445,7 @@ The migration from ATP to CBTC improves the capacity and efficiency of the railw
 
 \section{Conclusions}
 \begin{itemize}
-\item The current capabilities of the railway signaling systems in Ecuador were selected for their technical complexity, impact on urban mobility, and potential for significant improvements. In the Quito Metro project, signaling is based on ATP, which includes punctual and continuous train supervision, although it still relies heavily on human intervention. The implementation of CBTC technologies alongside the existing ATP could meet critical operational needs, as evidenced by the analysis results presented in Figure 15. A CBTC system outperforms ATP in terms of reliability (12.85\%), safety (10.5\%), capacity (2.8\%), maintenance (1.66\%), and costs (4.5\%).
+\item The current capabilities of the railway signaling systems in Ecuador were selected for their technical complexity, impact on urban mobility, and potential for significant improvements. In the Quito Metro project, signaling is based on ATP, which includes continuous and punctual train supervision, although it still relies heavily on human intervention. The implementation of CBTC technologies alongside existing ATP could meet critical operational needs, as evidenced by the analysis results presented in Figure 15. A CBTC system outperforms ATP in terms of reliability (12. 85\%), safety (10. 5\%), capacity (2. 8\%), maintenance (1. 66\%) and costs (4. 5\%).
 
 \item The adoption of the CBTC system in an environment with existing ATP in Ecuador significantly optimizes railway traffic management, increasing operational efficiency and line capacity. The CBTC reduces the interval between trains and increases line capacity, as demonstrated in case SIM-8, with 24 trains, 1.5-minute headway, and 25-second stops. Compared to case SIM-4, adjusted to the current implementation, the CBTC improves the headway by 30 seconds less than the theoretical value and increases the line by 6 trains. Surpassing the limitations of ATP, which, although it improves safety and efficiency with a GoA 2, relies more on human intervention, the CBTC allows greater operational efficiency through scalable degrees of automation and continuous communication up to the maximum GoA 4, as indicated in Table  [\ref{tab1}]
 
